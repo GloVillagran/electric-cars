@@ -2,7 +2,6 @@
    font-family: 'Roboto', sans-serif;
    font-weight: 300;
    margin: 0;
-   box-sizing: border-box;
 }
 
 .menu-principal {
@@ -10,7 +9,6 @@
    display: flex;
    background: #276bf4;
    color: #fff;
-   display: flex;
    align-items: center;
    justify-content: space-between;
    padding: 10px 20px;
@@ -83,7 +81,6 @@ select {
 
 .contenido {
    display: grid;
-   ;
    grid-template-columns: repeat(1, 4fr);
    gap: 30px;
    padding: 20px 20px 20px 0;
@@ -246,6 +243,7 @@ main {
    .card button {
       width: 70%;
    }
+
 }
 
 
