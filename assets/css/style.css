@@ -1,0 +1,252 @@
+* {
+   font-family: 'Roboto', sans-serif;
+   font-weight: 300;
+   margin: 0;
+   box-sizing: border-box;
+}
+
+.menu-principal {
+   grid-area: menu;
+   display: flex;
+   background: #276bf4;
+   color: #fff;
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 10px 20px;
+}
+
+.logo {
+   font-size: 20px;
+}
+
+.menu-icon {
+   font-size: 30px;
+   cursor: pointer;
+
+}
+
+.menu {
+   list-style: none;
+   margin: 0;
+   padding: 0;
+   display: none;
+}
+
+.menu li {
+   display: block;
+   text-align: center;
+   margin: 10px 0;
+}
+
+.menu a {
+   text-decoration: none;
+   color: #fff;
+}
+
+#menu-toggle {
+   display: none;
+}
+
+#menu-toggle:checked+.menu {
+   display: block;
+}
+
+.seccion-filtros {
+   grid-area: seccion-filtros;
+}
+
+.seccion-filtros {
+   text-align: center;
+   display: flex;
+   flex-direction: column;
+   background-color: rgb(195, 192, 192);
+
+}
+
+.seccion-filtros div {
+   margin-bottom: 5px;
+}
+
+.ordenar {
+   margin-top: 1%;
+}
+
+select {
+   width: 80%;
+   padding: 8px;
+}
+
+.contenido {
+   grid-area: seccion-principal;
+}
+
+.contenido {
+   display: grid;
+   ;
+   grid-template-columns: repeat(1, 4fr);
+   gap: 30px;
+   padding: 20px 20px 20px 0;
+   justify-content: center;
+   background-color: white;
+   margin-left: 2%;
+}
+
+
+.contenido p {
+   margin-top: 5%;
+   font-size: small;
+   color: black;
+}
+
+.card {
+   display: flex;
+   color: rgb(255, 255, 255);
+   background-color: white;
+   padding: 20px;
+   text-align: center;
+   justify-content: center;
+   flex-direction: column;
+   align-items: center;
+   border-radius: 5px;
+   border: solid 1px rgb(56, 56, 56);
+}
+
+.card img {
+   width: 100%;
+}
+
+.card button {
+   margin-top: 5%;
+   width: 50%;
+   color: white;
+   background-color: #276bf4;
+   padding: 0.5em 3em;
+   border: none;
+   border-radius: 5px;
+}
+
+.paginacion {
+   text-align: center;
+}
+
+.paginacion ul {
+   list-style: none;
+   padding: 0;
+}
+
+.paginacion li {
+   display: inline;
+   margin-right: 10px;
+}
+
+.paginacion a {
+   text-decoration: none;
+   color: black;
+   padding: 2px 7px;
+   border-radius: 5px;
+   border: solid 1px black;
+   text-align: center;
+}
+
+.paginacion a:hover {
+   background-color: #0056b3;
+}
+
+footer {
+   grid-area: pie-de-pagina;
+   background: #060270;
+   color: white;
+   padding: 10px;
+   text-align: center;
+}
+
+footer p {
+   font-size: small;
+}
+
+main {
+   display: grid;
+   border: 1px solid black;
+   min-height: 100vh;
+
+   grid-template-areas:
+      "menu"
+      "seccion-filtros"
+      "seccion-principal"
+      "pie-de-pagina";
+
+}
+
+@media (min-width: 576px) {
+   main {
+      height: 100vh;
+      grid-template-areas:
+         "menu  seccion-filtros"
+         "menu seccion-principal"
+         "menu seccion-principal"
+         "pie-de-pagina seccion-principal";
+
+      grid-template-columns: 10rem 1fr;
+   }
+
+   .contenido {
+      grid-template-columns: repeat(4, 4fr);
+
+   }
+
+   .filtros {
+      flex-direction: row;
+      text-align: center;
+   }
+
+   .card img {
+      width: 200px;
+      height: 150px
+   }
+
+   .menu-principal {
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+   }
+
+   .menu {
+      display: flex;
+      color: black;
+      flex-direction: column;
+      margin-top: 35px;
+      font-size: medium;
+
+   }
+
+   .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      font-size: medium;
+      font-weight: bolder;
+      margin-top: 5px;
+   }
+
+   .menu-icon {
+      display: none;
+   }
+
+   nav ul {
+      flex-direction: row;
+   }
+
+   nav li {
+      margin-bottom: 0;
+      margin-right: 20px;
+   }
+   
+   .card button {
+      width: 70%;
+   }
+}
+
+
+;
